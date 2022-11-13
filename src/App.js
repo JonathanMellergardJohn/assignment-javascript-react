@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomeView from './views/HomeView';
+import ContactView from './views/ContactView'
+import NotFoundView from './views/NotFoundView'
+import CategoriesView from './views/CategoriesView';
+import CompareView from './views/CompareView';
+import ProductView from './views/ProductView';
+import SearchView from './views/SearchView';
+import ShoppingcartView from './views/ShoppingcartView';
+import WishlistView from './views/WishlistView';
+import FooterSection from './sections/FooterSection';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeView />} />
+        <Route path="/contact" element={<ContactView />} />
+        <Route path="*" element={<NotFoundView />} />
+        <Route path="/categories" element={<CategoriesView />} />
+        <Route path="/compare" element={<CompareView />} />
+        <Route path="/products" element={<ProductView />} />
+        <Route path="/search" element={<SearchView />} />
+        <Route path="/shoppingcart" element={<ShoppingcartView />} />
+        <Route path="/wishlist" element={<WishlistView />} />
+      </Routes>
+      <FooterSection />
+    </BrowserRouter>
   );
 }
 
