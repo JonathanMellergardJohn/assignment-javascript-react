@@ -16,13 +16,11 @@ const HomeView = () => {
     <>
       <HeaderSection backgroundcolor="bg--grey-gradient"/>
       <ShowcaseSection />
-      <SaleNNewArrivalSection />
       <FeaturedProductsSection />
-      <TopPicksNConsciousSection />
-      <SpecialtySection />
+      <SaleNNewArrivalSection />
       <SpecialOfferOneSection />
       <SpecialOfferTwoSection />
-      <Sale70OffSection />
+      <ServiceInfoSection />
     </>
   )
 }

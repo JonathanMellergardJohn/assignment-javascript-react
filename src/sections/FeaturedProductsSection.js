@@ -1,5 +1,6 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import ProductCard from '../components/ProductCard'
+import products from '../assets/Products'
 
 // NOTE: hade varit bättre att skapa en component som heter 'productGrid'!
 // TILL 'productGrid' skickas information FRÅN varje '...Section' om hur  
@@ -21,7 +22,7 @@ const FeaturedProductsSection = () => {
         <h2 className="featured-products-header">Featured Products</h2>
         <div className="grid">
           {
-          products.map(product => <ProductCard item={product} />)
+          products.map(product => <ProductCard key={product.id} item={product} />)
           }
         </div>
       </div>
